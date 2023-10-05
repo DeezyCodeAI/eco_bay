@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import db from "../../../../utils/db";
 import Product from "../../../../models/Product";
 
-export default async function GET(req, res) {
+export async function GET(req, res) {
     try {
         db.connectDb();
         const id = req.params.id;
